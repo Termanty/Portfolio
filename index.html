@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allison&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Nunito:wght@200;300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/db8684494c.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <div class="main-nav">
+        <div class="container">
+          <div class="logo">Tero Mäntylä</div>
+          <nav class="topnav" id="myTopnav">
+            <a href="javascript:void(0);" class="icon" onclick="mobileMenu()">
+              <i class="fa fa-bars"></i>
+            </a>
+            <a href="#projects">Projects</a>
+            <a href="#aboutme">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="pages/gallery.html">Gallery</a>
+            <a href="http://bc.fi" target="_blank">HBC</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="hero-banner main-header">
+        <p class="p-header">Welcome to my</p>
+        <h1>Portfolio</h1>
+      </div>
+    </header>
+    <main>
+      <section class="container projects">
+        <h2 id="projects">Projects</h2>
+        <div class="cards">
+          <div class="card card1">
+            <img
+              src="https://img.wallpapersafari.com/desktop/728/410/17/74/1P5nsI.jpg"
+            />
+            <h3>Sudoku Solver</h3>
+            <p>Do you have difficulty to solve sudoku. Let me help you.</p>
+            <a href="#">Solver</a>
+          </div>
+          <div class="card card2">
+            <img src="https://static.dw.com/image/45772721_303.jpg" />
+            <h3>Java Chess</h3>
+            <p>Play chess with your friend or against easy computer AI.</p>
+            <a href="#">Java Chess</a>
+          </div>
+          <div class="card card3">
+            <img
+              src="https://hdwallpapers.cat/thumbnail/lets-do-this-weird-random-simple-kart-funny-75gE.jpg"
+            />
+            <h3>Warehouse rush</h3>
+            <p>When everything went wrong. Last man standing.</p>
+            <a href="#">Dive to the Madness</a>
+          </div>
+        </div>
+      </section>
+      <section class="container aboutme">
+        <h2 id="aboutme">About Me</h2>
+        <img
+          src="https://images.unsplash.com/photo-1531715210939-d957bc76aee7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1392&q=80"
+          alt="Too easy"
+          class="img img2"
+        />
+        <p>
+          Hello! My name is Tero. I live in Espoo with my 9 year old son and my
+          life partner Leela. I worked as a yoga teacher when I was little bit
+          younger. Then I wanted "real job" and studied electrical installations
+          in Amiedu and became an electrician. I wrote my first code lines over
+          30 years ago. Now I would like to improve skills so that I can work
+          professionally in software/web development. My hobbies are tantra,
+          yoga, boulder climbing, dancing, summer cottage, ice baths, bhajan
+          singing, meditation and what ever feels goood!
+        </p>
+      </section>
+      <section class="container skills">
+        <h2 id="skills">Skills</h2>
+        <div class="skillBoxes">
+          <div class="box">
+            <h3>HTML</h3>
+            <i class="fab fa-html5"></i>
+            <progress id="file" value="75" max="100"></progress>
+          </div>
+          <div class="box">
+            <h3>CSS</h3>
+            <i class="fab fa-css3-alt"></i>
+            <progress id="file" value="60" max="100"></progress>
+          </div>
+          <div class="box">
+            <h3>React</h3>
+            <i class="fab fa-react"></i>
+            <progress id="file" value="50" max="100"></progress>
+          </div>
+          <div class="box">
+            <h3>Nodejs</h3>
+            <i class="fab fa-node-js"></i>
+            <progress id="file" value="30" max="100"></progress>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="form">
+        <form action="">
+          <div class="input-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" />
+          </div>
+          <div class="input-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" />
+          </div>
+          <div class="input-field">
+            <label for="msg">Message</label>
+            <textarea name="" id="msg" cols="30" rows="5"></textarea>
+          </div>
+          <input type="submit" value="submit" />
+        </form>
+        <p>Copyright Tero Mäntylä</p>
+      </div>
+    </footer>
+    <button onclick="topFunction()" id="goTopBtn" title="Go to top">Top</button>
+    <script src="main.js"></script>
+  </body>
+</html>

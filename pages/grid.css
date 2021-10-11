@@ -1,0 +1,254 @@
+/* Global Css */
+
+:root {
+  --bg-color: #e4dfdd;
+  --bg-light: #f7f3f1;
+  --highlight: #ffb906;
+  --dark-toffee: #81541e;
+  --toffee: #cc9326;
+  --dark-syrup: #2b1910;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: linear-gradient(to right, var(--bg-color), var(--bg-light));
+  font-family: "Nunito", sans-serif;
+  height: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+/* Header */
+
+.main-nav {
+  position: fixed;
+  background-image: linear-gradient(to right, var(--bg-color), var(--bg-light));
+  width: 100%;
+}
+
+.main-nav .container {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.logo {
+  font-size: 5em;
+  color: var(--dark-toffee);
+  font-family: "Just Me Again Down Here", cursive;
+  text-shadow: 0 0 2px var(--dark-syrup);
+}
+
+.logo::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: var(--highlight);
+  z-index: -1;
+  position: absolute;
+  top: 15px;
+  left: 95px;
+}
+
+@media (min-width: 1220px) {
+  .logo::after {
+    left: calc(100vw / 2 - 610px + 95px);
+  }
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--dark-toffee);
+}
+
+nav a {
+  font-size: 1.2rem;
+  padding: 0px 20px;
+  color: var(--dark-syrup);
+}
+
+a:hover {
+  transform: translate(0px, -1px);
+}
+
+/* Main */
+
+main {
+  width: 100%;
+  margin: 0px auto;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.grid {
+  max-width: 1000px;
+  width: 90%;
+  margin: 0px auto;
+  padding-top: 180px;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 4vh);
+  grid-gap: 5px;
+  grid-template-areas:
+    "a a a a a b b b c c d d d d d d d d e e"
+    "a a a a a b b b c c d d d d d d d d e e"
+    "a a a a a b b b c c d d d d d d d d h h"
+    "g g g g g b b b c c d d d d d d d d h h"
+    "g g g g g b b b c c d d d d d d d d h h"
+    "g g g g g b b b c c d d d d d d d d h h"
+    "g g g g g b b b c c d d d d d d d d h h"
+    "g g g g g b b b c c d d d d d d d d h h"
+    "f f f f f f f f f f f f i i i i i i i i"
+    "f f f f f f f f f f f f i i i i i i i i"
+    "f f f f f f f f f f f f i i i i i i i i"
+    "f f f f f f f f f f f f i i i i i i i i"
+    "f f f f f f f f f f f f i i i i i i i i"
+    "f f f f f f f f f f f f i i i i i i i i"
+    "f f f f f f f f f f f f i i i i i i i i"
+    "f f f f f f f f f f f f i i i i i i i i"
+    "f f f f f f f f f f f f i i i i i i i i"
+    "f f f f f f f f f f f f i i i i i i i i"
+    "f f f f f f f f f f f f i i i i i i i i"
+    "f f f f f f f f f f f f i i i i i i i i";
+}
+
+.a {
+  grid-area: a;
+}
+
+.b {
+  grid-area: b;
+}
+
+.c {
+  grid-area: c;
+}
+
+.d {
+  grid-area: d;
+}
+
+.e {
+  grid-area: e;
+}
+
+.f {
+  grid-area: f;
+}
+
+.g {
+  grid-area: g;
+}
+
+.h {
+  grid-area: h;
+}
+
+.i {
+  grid-area: i;
+}
+
+/* footer */
+
+footer {
+  margin-top: 100px;
+  display: flex;
+  height: 100px;
+  background-color: var(--dark-syrup);
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tablet support */
+
+@media (max-width: 899px) {
+  .logo {
+    font-size: 5rem;
+  }
+
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+    font-size: 2rem;
+  }
+
+  .topnav.responsive {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 40px;
+    right: 15px;
+    background-color: var(--bg-light);
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .topnav.responsive a.icon {
+    transform: translateX(51px);
+    margin-bottom: 10px;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    padding: 5px;
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  img {
+    width: 95%;
+  }
+}
+
+/* Mobile support */
+
+@media (max-width: 576px) {
+  .logo {
+    font-size: 3em;
+  }
+
+  .logo::after {
+    height: 60px;
+    width: 60px;
+    left: 63px;
+  }
+}
