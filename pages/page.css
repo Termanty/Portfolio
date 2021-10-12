@@ -103,6 +103,12 @@ main {
   margin: 0px auto;
 }
 
+h1 {
+  padding-top: 200px;
+  color: var(--dark-toffee);
+  text-align: center;
+}
+
 img {
   object-fit: cover;
   width: 100%;

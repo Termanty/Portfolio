@@ -280,7 +280,7 @@ footer p {
   z-index: 99;
   border: none;
   outline: none;
-  background-color: red;
+  background-color: var(--highlight);
   color: white;
   cursor: pointer;
   padding: 15px;
@@ -398,10 +398,3 @@ footer p {
     transform: translateX(0);
   }
 }
-
-/* 
-#2B1910
-#CC9326 
-#81541e
-#2b1910
-*/
